@@ -11,4 +11,22 @@
   </div>
   <h2><%= @group.title %></h2>
   <p><%= @group.description %></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>文章内容</th>
+        <th>发表者</th>
+        <th>发表时间</th>
+      </tr>
+    </thead>
+    <today>
+      <% @posts.each do |post| %>
+        <tr>
+          <th><%= post.content %></th>
+          <th><%= post.user.email %></th>
+          <th><%= post.created_at %></th>
+        </tr>
+      <% end %>
+    </today>
+  </table>
 </div>
