@@ -1,7 +1,8 @@
 <div class="col-md-12">
   <div class="group">
 
-    <%= link_to("Write a Post", new_group_post_path(@group), class: "btn btn-default pull-right")%>
+    
+     <%= link_to("Write a Post", new_group_post_path(@group), class: "btn btn-default pull-right")%>
 
 
     <% if current_user && current_user == @group.user%>
@@ -29,4 +30,7 @@
       <% end %>
     </today>
   </table>
+  <div classa="text-center">
+    <%= will_paginate @posts %>
+  </div>
 </div>
